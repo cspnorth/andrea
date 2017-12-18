@@ -1,0 +1,1027 @@
+/*
+Theme Name: Experon Pro
+*/
+
+/*  TABLE OF CONTENTS
+00. IMPORT
+01. THEME SPECIFIC
+02. PORTFOLIO
+03. RESPONSIVE
+04. WOOCOMMERCE
+05. WOOCOMMERCE-THEME
+*/
+
+/* ---------------------------------------------------------------------------------------
+	00. IMPORT
+--------------------------------------------------------------------------------------- */
+
+/* Shortcodes rtl stylesheet */
+@import url('styles/rtl/style-shortcodes-rtl.css');
+
+
+/* ---------------------------------------------------------------------------------------
+	01. THEME SPECIFIC
+--------------------------------------------------------------------------------------- */
+
+/* =RESET
+--------------------------------------------------------------------------------------- */
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+.panel-grid-cell {
+	padding: 0 0 20px 2.6%
+}
+.panel-grid .panel-grid-cell:last-child {
+	padding-left: 0 !important;
+	padding-right: inherit !important;
+}
+blockquote:before, q:before {
+	left: auto;
+	right: 18px;
+}
+blockquote, q {
+	padding: 15px 70px 15px 25px;
+}
+
+/* =GLOBAL
+--------------------------------------------------------------------------------------- */
+
+/* Text elements */
+ul, ol {
+	margin: 0 20px 20px 0;
+}
+ul ul, ol ol, ul ol, ol ul {
+	margin-left: 0;
+	margin-right: 1.5em;
+}
+
+/* Alignment */
+.alignleft {
+	float: right;
+}
+.alignright {
+	float: left;
+}
+
+/* =NAVIGATION
+--------------------------------------------------------------------------------------- */
+.nav-previous,
+.nav-next {
+	float: right;
+	margin-left: 10px;
+	margin-right: 0;
+}
+.nav-previous a,
+.nav-next a {
+	float: right;
+}
+.nav-previous a .meta-icon,
+.nav-next a .meta-icon {
+	float: right;
+}
+
+/* =Pagination
+----------------------------------------------------------------------------- */
+.pag li {
+	margin-left: 1px;
+	margin-right: 0;
+}
+.pag li a,
+.pag li span {
+	margin: 2px 2px 2px 8px;
+}
+
+/* Centralize pagination for all except first and last page */
+.pag.pag-start {
+	text-align: right;
+}
+.pag.pag-end {
+	text-align: left;
+}
+.pag.pag-inner span.pag-before {
+	float: right;
+}
+.pag.pag-inner span.pag-current {
+}
+.pag.pag-inner span.pag-after {
+	float: left;
+}
+
+/* =Main
+----------------------------------------------------------------------------- */
+#logo {
+	float: right;
+}
+
+/* =Menu
+----------------------------------------------------------------------------- */
+
+/* Pre-header */
+#pre-header li {
+	float: right;
+}
+#pre-header  .header-links > ul > li.menu-parent > a:after {
+	padding-left: 0;
+	padding-right: 6px;
+}
+
+/* Pre-header - Alignment */
+#pre-header li.alignright {
+	float: left;
+}
+
+/* Pre-header - Icon Styling */
+#pre-header .header-links i {
+	padding-left: 10px;
+	padding-right: 0;
+}
+
+/* Pre-header - Social Media*/
+#pre-header-social ul {
+	float: left;
+}
+#pre-header-social li {
+	border-left: none;
+	border-right: 1px solid #E1E1E1;
+}
+#pre-header-social li.message {
+	padding-left: 10px;
+	padding-right: 0;
+}
+#pre-header-social li:last-child {
+	border-left: 1px solid #E1E1E1;
+}
+
+/* Header */
+#header-links {
+	float: left;
+}
+#header-links-inner {
+	float: left;
+}
+#header .header-links li {
+	float: right;
+}
+#header .header-links > ul > li.menu-parent > a:after {
+	float: left;
+	padding-left: 0;
+	padding-right: 6px;
+}
+#header .header-links .sub-menu {
+	float: right;
+}
+#header .header-links .menu-hover > .sub-menu {
+	margin-left: 0;
+	margin-right: -16px;
+}
+.main-navigation ul {
+	padding-right: 0;
+}
+.main-navigation .sub-menu .sub-menu {
+	left: auto;
+	right: 100%;
+}
+
+/* Header - Search */
+#header-search .search {
+	left: 0;
+	right: auto;
+	border-left: none;
+}
+#header-search a {
+	margin-left: 0;
+	margin-right: 20px;
+}
+
+/* Arrows of menu parents (uses FontAwesome css) */
+#pre-header .sub-menu .menu-parent > a:before {
+	content: "\f104";
+	text-align: left;
+	left: auto;
+	right: 5px;
+	float: left;
+}
+#header .sub-menu .menu-parent > a:before {
+	content: "\f104";
+	text-align: left;
+	left: auto;
+	right: 15px;
+	float: left;
+}
+
+/* =Slider
+----------------------------------------------------------------------------- */
+
+/* Responsive ThinkUpSlider - Content */
+#slider .featured-icon i,
+.thinkupslider-sc .featured-icon i {
+	left: 0;
+	right: auto;
+}
+
+/* Slider - Style 2 & 3 */
+#slider.style2 .featured.one_half,
+.thinkupslider-sc.style2 .featured.one_half {
+	padding-left: 0;
+	padding-right: 40px;
+}
+#slider.style3 .featured.one_half,
+.thinkupslider-sc.style3 .featured.one_half {
+	padding-left: 40px;
+	padding-right: 0;
+}
+
+/* Slider - Alignment */
+#slider .rslides-content.slider-left .featured-title,
+#slider .rslides-content.slider-left .featured-excerpt,
+#slider .rslides-content.slider-left .featured-link,
+.thinkupslider-sc .rslides-content.slider-left .featured-title,
+.thinkupslider-sc .rslides-content.slider-left .featured-excerpt,
+.thinkupslider-sc .rslides-content.slider-left .featured-link {
+	text-align: right;
+}
+#slider .rslides-content.slider-left .featured-link,
+.thinkupslider-sc .rslides-content.slider-left .featured-link {
+	float: right;
+}
+#slider .rslides-content.slider-right .featured-title,
+#slider .rslides-content.slider-right .featured-excerpt,
+#slider .rslides-content.slider-right .featured-link,
+.thinkupslider-sc .rslides-content.slider-right .featured-title,
+.thinkupslider-sc .rslides-content.slider-right .featured-excerpt,
+.thinkupslider-sc .rslides-content.slider-right .featured-link {
+	text-align: left;
+}
+#slider .rslides-content.slider-right .featured-link,
+.thinkupslider-sc .rslides-content.slider-right .featured-link {
+	float: left;
+}
+#slider .rslides-content.slider-middle .featured-title,
+#slider .rslides-content.slider-middle .featured-excerpt,
+#slider .rslides-content.slider-middle .featured-link,
+.thinkupslider-sc .rslides-content.slider-middle .featured-title,
+.thinkupslider-sc .rslides-content.slider-middle .featured-excerpt,
+.thinkupslider-sc .rslides-content.slider-middle .featured-link {
+	margin-left: 0;
+	margin-right: auto;
+}
+
+/* =Intro Options
+----------------------------------------------------------------------------- */
+
+/* Breadcrumbs */
+#intro #breadcrumbs .delimiter {
+    padding: 0px 5px;
+}
+#intro #breadcrumbs-core {
+	float: left;
+}
+#intro #breadcrumbs-home {
+	padding-left: 0;
+	padding-right: 12px;
+}
+#intro #breadcrumbs-home:after {
+	padding-left: 0;
+	padding-right: 12px;
+}
+#intro #breadcrumbs-core a,
+#intro #breadcrumbs-core span {
+	float: right;
+}
+
+/* =MAIN CONTENT
+--------------------------------------------------------------------------------------- */
+
+/* =Call to Action
+----------------------------------------------------------------------------- */
+
+/* Call to Action - Style 2 Specific Code */
+#introaction.style2 .action-message,
+#outroaction.style2 .action-message {
+	text-align: right;
+}
+
+/* =FOOTER
+--------------------------------------------------------------------------------------- */
+
+/* Sub Footer */
+#footer-menu {
+	text-align: left;
+}
+
+/* Sub Footer - Close */
+#sub-footer-close-core {
+	left: 0;
+	right: auto;
+}
+
+/* Post-footer - Social Media */
+#post-footer-social ul {
+	float: left;
+}
+#post-footer-social li a {
+	margin-left: 0;
+	margin-right: 10px;
+}
+
+/* Post-footer - Scroll To Top */
+#scrollUp {
+	left: 20px;
+	right: auto;
+}
+
+/* =WIDGETS & SIDEBAR
+--------------------------------------------------------------------------------------- */
+
+/* =Widgets
+--------------------------------------------------------------------------------------- */
+
+/* Default Widgets */
+.widget li > a:before {
+	float: right;
+	margin-left: 15px;
+	margin-right: 0;
+}
+.widget ul.children li a,
+.widget ul.sub-menu li a { 
+	padding-left: 0;
+	padding-right: 20px;
+}
+.widget ul.children ul.children li a,
+.widget ul.sub-menu ul.sub-menu li a { 
+	padding-left: 0;
+	padding-right: 40px;
+}
+
+/* Default Widgets - Footer Area */
+#footer .widget ul.children li a,
+#footer .widget ul.sub-menu li a { 
+	padding-left: 0;
+	padding-right: 15px;
+}
+#footer .widget ul.children ul.children li a,
+#footer .widget ul.sub-menu ul.sub-menu li a { 
+	padding-left: 0;
+	padding-right: 30px;
+}
+
+/* Widget Specific - Archives */
+.widget.widget_archive li > a:before {
+	margin-left: 0;
+}
+
+/* Default Widget - Tag Cloud */
+#sidebar .widget_tag_cloud a {
+	margin: 0 0 6px 5px;
+}
+#footer .widget_tag_cloud a:nth-child(3n) {
+	margin-left: 0;
+}
+#footer .widget_tag_cloud a {
+	margin: 0 0 6px 3px;
+}
+
+/* Default Widget - Search */
+.widget_search .search {
+	float: right;
+}
+
+/* Custom Widget - Categories */
+.thinkup_widget_categories li span {
+	float: right;
+}
+
+/* Custom Widget - Child Menu */
+.thinkup_widget_childmenu li > a:before {
+	float: left;
+}
+	
+/* Custom Widget - Contact Form */
+.wpcf7-form .wpcf7-not-valid-tip {
+	left: auto;
+	right: 0;
+}
+
+/* Custom Widget - Flickr */
+.thinkup_widget_flickr .flickr-photo {
+	float: right;
+	margin-left: 9px;
+	margin-right: 0;
+}
+#sidebar .thinkup_widget_flickr a .image-overlay {
+	left: auto;
+	right: 0;
+}
+
+/* Custom Widget - Popular Posts / Recent Comments / Recent Posts */
+.popular-posts .image,
+.recent-comments .image,
+.recent-posts .image {
+	float: right;
+}
+.popular-posts .main,
+.recent-comments .main,
+.recent-posts .main {
+	float: right;
+	padding-left: 0;
+	padding-right: 5%;
+}
+#sidebar .popular-posts a .image-overlay,
+#sidebar .recent-comments a .image-overlay,
+#sidebar .recent-posts a .image-overlay {
+	left: auto;
+	right: 0;
+}
+
+/* Custom Widget - Recent Comments Quotes */
+.thinkup_widget_recentcomments .quote {
+	padding-left: 0;
+	padding-right: 15px;
+}
+
+/* Custom Widget - Search Form */
+.thinkup_widget_search .search {
+	float: right;
+}
+
+/* Custom Widget - Tags Cloud */
+#sidebar .thinkup_widget_tagscloud a {
+	margin: 0 0 6px 5px;
+}
+#footer .thinkup_widget_tagscloud a {
+	margin: 0 0 6px 6px;
+}
+
+/* Custom Widget - Twitter Feed */
+.thinkup_widget_twitterfeed .tweet-content {
+	padding: 10px 45px 0 10px;
+}
+#sidebar .thinkup_widget_twitterfeed .tweet-content {
+	background-position: right 2px top 5px;
+}
+#footer .thinkup_widget_twitterfeed .tweet-content {
+	background-position: right -8px top -5px;
+	padding: 0 35px 0 0;
+}
+#sub-footer .thinkup_widget_twitterfeed {
+	padding-left: 15px;
+	padding-right: 0;
+}
+#sub-footer .thinkup_widget_twitterfeed .tweet-content {
+	background-position: left -5px;
+	padding: 0 0 0 55px;
+}
+
+/* =PAGE FORMATS
+--------------------------------------------------------------------------------------- */
+
+/* =Meta Content
+----------------------------------------------------------------------------- */
+.entry-meta > span {
+	margin: 0 0 5px 5px;
+}
+
+/* =Blog - Style 1
+--------------------------------------------------------------------------------------- */
+.blog-icon i {
+	float: right;
+}
+
+/* =Blog - Featured Image Overlay
+--------------------------------------------------------------------------------------- */
+.blog-thumb .image-overlay {
+	left: auto;
+	right: 0;
+}
+.blog-thumb .image-overlay-inner a.hover-zoom {
+	-webkit-transform: translateX(35px);
+	-moz-transform: translateX(35px);
+	-ms-transform: translateX(35px);
+	-o-transform: translateX(35px);
+	transform: translateX(35px);
+}
+.blog-thumb .image-overlay-inner a.hover-link {
+	-webkit-transform: translateX(-35px);
+	-moz-transform: translateX(-35px);
+	-ms-transform: translateX(-35px);
+	-o-transform: translateX(-35px);
+	transform: translateX(-35px);
+}
+.blog-thumb:hover .image-overlay-inner a {
+	-webkit-transform: translateY(0);
+	-moz-transform: translateY(0);
+	-ms-transform: translateY(0);
+	-o-transform: translateY(0);
+	transform: translateY(0)
+}
+
+/* =Blog - Style 1
+--------------------------------------------------------------------------------------- */
+.blog-article .blog-icon {
+	left: auto;
+	right: 0;
+}
+.blog-article .entry-meta > span {
+	padding-left: 15px;
+	padding-right: 0;
+}
+.blog-article .entry-meta i {
+	padding-left: 10px;
+	padding-right: 0;
+}
+
+/* =Blog - Style 2
+--------------------------------------------------------------------------------------- */
+.blog-style2 .blog-article .entry-meta.style1 {
+	float: left;
+}
+
+/* =Single Post
+--------------------------------------------------------------------------------------- */
+
+/* Post Format */
+.single .post-title {
+	float: right;
+}
+
+/* Meta content */
+.single .entry-meta > span {
+	padding-left: 15px;
+	padding-right: 0;
+}
+.single .entry-meta i {
+	padding-left: 10px;
+	padding-right: 0;
+}
+
+/* Post - Share */
+#sharemessage {
+	text-align: left;
+	padding-left: 20px;
+	padding-right: 0;
+}
+#shareicons {
+	padding-left: 0;
+	padding-right: 20px;
+}
+#shareicons a {
+	float: right;
+	margin-left: 20px;
+	margin-right: 0;
+}
+
+/* Author Bio */
+#author-image {
+	float: right;
+}
+#author-content {
+	margin-left: 0;
+	margin-right: 100px;
+}
+#author-bio img {
+	margin-left: 30px;
+	margin-right: 0;
+}
+
+/* Comments input and textarea placeholder text color */
+.commentlist article header {
+	margin: 0px 100px 0 0;
+}
+.commentlist .children {
+	margin: 0 130px 0 0;
+}
+.commentlist .avatar {
+	float: right;
+}
+
+/* =Contact Us
+--------------------------------------------------------------------------------------- */
+.page-template-template-contact-php #main .contact-details i {
+	margin: 0 0 5px 12px;
+}
+
+/* =Archive
+--------------------------------------------------------------------------------------- */
+.page-template-template-archive-php ul.archive-pages,
+.page-template-template-archive-php ul.archive-categories,
+.page-template-template-archive-php ul.archive-authors,
+.page-template-template-archive-php ul.archive-monthly,
+.page-template-template-archive-php ul.archive-recent {
+	margin-left: 0;
+	margin-right: 2px;
+}
+.page-template-template-archive-php ul.archive-pages .children li,
+.page-template-template-archive-php ul.archive-categories .children li,
+.page-template-template-archive-php ul.archive-authors .children li,
+.page-template-template-archive-php ul.archive-monthly .children li,
+.page-template-template-archive-php ul.archive-recent .children li {
+	padding-left: 0;
+	padding-right: 25px;
+}
+.page-template-template-archive-php ul.archive-pages li:before,
+.page-template-template-archive-php ul.archive-categories li:before,
+.page-template-template-archive-php ul.archive-authors li:before,
+.page-template-template-archive-php ul.archive-monthly li:before,
+.page-template-template-archive-php ul.archive-recent li:before {
+	padding-left: 10px;
+	padding-right: 0;
+}
+.page-template-template-archive-php ul.archive-pages ul.children,
+.page-template-template-archive-php ul.archive-categories ul.children,
+.page-template-template-archive-php ul.archive-authors ul.children,
+.page-template-template-archive-php ul.archive-monthly ul.children,
+.page-template-template-archive-php ul.archive-recent ul.children {
+	margin: 10px -2px 10px 0px;
+}
+
+/* =Sitemap
+--------------------------------------------------------------------------------------- */
+.page-template-template-sitemap-php ul.sitemap-pages,
+.page-template-template-sitemap-php ul.sitemap-authors,
+.page-template-template-sitemap-php ul.sitemap-archives,
+.page-template-template-sitemap-php ul.sitemap-posts,
+.page-template-template-sitemap-php ul.sitemap-posts ul {
+	margin-left: 0;
+	margin-right: 2px;
+}
+.page-template-template-sitemap-php ul.sitemap-pages .children li,
+.page-template-template-sitemap-php ul.sitemap-authors .children li,
+.page-template-template-sitemap-php ul.sitemap-archives .children li,
+.page-template-template-sitemap-php ul.sitemap-posts .children li,
+.page-template-template-sitemap-php ul.sitemap-posts ul .children li {
+	padding-left: 0;
+	padding-right: 25px;
+}
+.page-template-template-sitemap-php ul.sitemap-pages li:before,
+.page-template-template-sitemap-php ul.sitemap-authors li:before,
+.page-template-template-sitemap-php ul.sitemap-archives li:before,
+.page-template-template-sitemap-php ul.sitemap-posts li:before,
+.page-template-template-sitemap-php ul.sitemap-posts ul li:before {
+	padding-left: 10px;
+	padding-right: 0;
+}
+.page-template-template-sitemap-php ul.sitemap-pages ul.children,
+.page-template-template-sitemap-php ul.sitemap-authors ul.children,
+.page-template-template-sitemap-php ul.sitemap-archives ul.children,
+.page-template-template-sitemap-php ul.sitemap-posts ul.children,
+.page-template-template-sitemap-php ul.sitemap-posts ul ul.children {
+	margin: 10px -2px 10px 0px;
+}
+
+/* =404 Error
+--------------------------------------------------------------------------------------- */
+.title-404 h2 i {
+	padding-left: 15px;
+	padding-right: 0;
+}
+
+/* =Portfolio (styling code in style-portfolio.css)
+--------------------------------------------------------------------------------------- */
+.column-1,
+.column-2,
+.column-3,
+.column-4 {
+	float: right;
+}
+
+/* =Team
+--------------------------------------------------------------------------------------- */
+
+/* Team page members media */
+.team-social li a {
+	margin-left: 8px;
+	margin-right: 0;
+}
+
+/* Align team details in table (name, social, message) */
+.team-content .team-links,
+.team-content .team-email {
+	text-align: left;
+}
+.team-content .team-links ul {
+	margin: 0 auto 0 0;
+}
+
+/* =Testimonials
+--------------------------------------------------------------------------------------- */
+
+/* Testimonial - Style 1 */
+.testimonial-grid.style1 .testimonial-excerpt:before {
+	left: 100%;
+	right: 45%;
+}
+
+/* =SHORTCODES - THEME SPECIFIC STYLE
+--------------------------------------------------------------------------------------- */
+
+/* ACCORDION
+------------------------------------------------------------------ */
+
+.accordion-heading .accordion-toggle {
+	padding-left: 50px;
+	padding-right: 20px;
+}
+.accordion-toggle:before {
+	left: 20px;
+	right: auto;
+}
+
+/* BLOCKQUOTES
+------------------------------------------------------------------ */
+blockquote.style2, q.style2 {
+	border-left: none;
+	border-right: 10px solid #115172;
+}
+
+/* BUTTONS
+------------------------------------------------------------------ */
+.button i {
+	margin-left: 0;
+	margin-right: 10px;
+}
+
+/* CALL TO ACTION
+------------------------------------------------------------------ */
+
+/* Call to Action - Style 2 Specific Code */
+.sc-action.style2 .action-message {
+	text-align: right;
+}
+
+/* CAROUSEL (NAVIGATION)
+------------------------------------------------------------------ */
+.sc-carousel a.next {
+	left: 10px;
+	right: auto;
+}
+.sc-carousel a.prev {
+	left: 45px;
+	right: auto;
+}
+.sc-carousel-title {
+	float: right;
+}
+
+/* Image overlay effect */
+.sc-carousel .entry-header .hover-zoom:before,
+.sc-carousel .entry-header .hover-link:before,
+.sc-postitem .entry-header .hover-zoom:before,
+.sc-postitem .entry-header .hover-link:before {
+	left: auto;
+	right: 0;
+}
+.sc-carousel .entry-header .hover-link:before,
+.sc-postitem .entry-header .hover-link:before {
+	left: auto;
+	right: 0;
+}
+
+/* LIST - FONT AWESOME
+------------------------------------------------------------------ */
+ul.iconfont i {
+	margin: 0 -22px 0 15px;
+}
+
+/* PRICING TABLE
+------------------------------------------------------------------ */
+.pricing-table i {
+	left: auto;
+	right: -15px;
+}
+.pricing-features {
+	text-align: right;
+}
+
+/* TABS
+------------------------------------------------------------------ */
+
+/* Style 3 */
+.tabs.style3 .nav-tabs {
+	padding: 2px 2px 3px 0;
+}
+
+/* ICONS (FONT AWESOME)
+------------------------------------------------------------------ */
+
+/* Font Icon - Style 2 */
+.iconfull.style2 .iconimage i {
+	margin-left: 20px;
+	margin-right: 0;
+}
+.iconfull.style2 .iconimage h3 {
+	padding-right: 0;
+}
+
+/* =PAGE BUILDER - THEME SPECIFIC STYLE
+--------------------------------------------------------------------------------------- */
+
+/* Carousel - Portfolio  - Style when no link is set for portfolio button */
+.carousel-portfolio-builder.style2 .sc-carousel.carousel-portfolio a.prev {
+	left: auto;
+	right: -35px;
+}
+.carousel-portfolio-builder.style2 .sc-carousel.carousel-portfolio a.next {
+	left: -35px;
+	right: auto;
+}
+.carousel-portfolio-builder.style2 .sc-carousel-button {
+	left: 0;
+	right: auto;
+}
+.layout-boxed .carousel-portfolio-builder.style2 .sc-carousel.carousel-portfolio a.prev {
+	left: auto;
+	right: -20px;
+}
+.layout-boxed .carousel-portfolio-builder.style2 .sc-carousel.carousel-portfolio a.next {
+	left: -20px;
+	right: auto;
+}
+
+/* Services - Style 1 */
+.services-builder.style1 .iconimage {
+	text-align: right;
+}
+.services-builder.style1 .iconimage i {
+	margin: 16px -16px 0 0;
+}
+.services-builder.style1.services-image .iconimage {
+	text-align: right;
+}
+
+
+/* ---------------------------------------------------------------------------------------
+	02. PORTFOLIO
+--------------------------------------------------------------------------------------- */
+
+/* Filter styles */
+#portfolio-options {
+	float: right;
+}
+#filter.portfolio-filter li a {
+	text-align: right;
+	padding: 4px 35px 4px 49px;
+}
+
+/* Portolio Hover */
+.port-thumb li article {
+	left: auto;
+	right: 0;
+}
+
+/* Portfolio Slider & Featured Projects */
+#port-featured .sc-carousel li {
+	padding: 0 0 0 25px;
+}
+#port-featured .sc-carousel a.next {
+	left: 25px;
+	right: auto;
+}
+#port-featured .sc-carousel a.prev {
+	left: 65px;
+	right: auto;
+}
+
+/* Portfolio Style 2 - Specific */
+#portfolio-options.style2 #filter.portfolio-filter li {
+	float: right;
+}
+
+
+/* ---------------------------------------------------------------------------------------
+	03. RESPONSIVE
+--------------------------------------------------------------------------------------- */
+
+/* Desktop / Laptop */
+@media only screen and (max-width: 1140px) {
+	#logo {
+		margin-left: 0;
+		margin-right: 15px;
+	}
+}
+	
+/* iPad & Tablet */
+@media only screen and (max-width: 768px) {
+
+	/* Header */
+	#logo {
+		text-align: right;
+	}
+	#logo img,
+	#logo h1 {
+		float: right;
+	}
+	.btn-navbar .icon-bar {
+		margin: 0 auto 0 0;
+	}
+}
+
+/* Small Tablets & Larger Phones */
+@media only screen and (max-width: 685px) {
+
+	/* Main */
+	#main-core,
+	#intro.option1, 
+	#intro.option2 {
+		margin-right: 0px !important;
+	}
+	#intro #intro-core {
+		margin-left: 0;
+		margin-right: 10px;
+	}
+	#intro.option2 .page-title {
+		text-align: right;
+	}
+
+	/* Intro / Outro */
+	.action-text.three_fourth,
+	.action-button.one_fourth.last {
+		margin-left: 0;
+	}
+
+	/* Widgets */
+	.thinkup_widget_flickr .flickr-photo {
+		margin-left: 5px !important;
+		margin-right: 0 !important;
+	}
+}
+
+/* iPhone (Landscape) */
+@media only screen and (max-width: 568px) {
+
+	/* Intro / Outro */
+	.action-text {
+		border-left: none;
+	}
+	
+	/* Portfolio */
+	#filter.portfolio-filter,
+	#portfolio-options.style2 #filter.portfolio-filter li	{
+		margin-right: 0;
+	}
+
+	/* Single Post */
+	#comments {
+		margin-left: 0;
+	}
+	#nocomments {
+		margin-right: 0;
+	}
+	
+	/* Single Post Share */
+	#author-bio .author-description {
+		padding-left: 50px;
+		padding-right: 0;
+	}
+
+	/* Shortcode Content */
+	.one_half,
+	.one_third,
+	.two_third,
+	.one_fourth,
+	.three_fourth,
+	.one_fifth,
+	.two_fifth,
+	.three_fifth,
+	.four_fifth,
+	.one_sixth,
+	.five_sixth {
+		margin-left: 0;
+	}
+
+	/* Portfolio Navigation */
+	.carousel-portfolio-builder.style2 .sc-carousel.carousel-portfolio a.prev {
+		left: 46px;
+		right: auto;
+	}
+	.carousel-portfolio-builder.style2 .sc-carousel.carousel-portfolio a.next {
+		left: 11px;
+		right: auto;
+	}
+
+	/* Widgets */
+	.thinkup_widget_categories li span {
+		padding-left: 0;
+		padding-right: 5px;
+	}
+}
+
+/* iPhone (Portrait) */
+@media only screen and (max-width: 320px) {
+
+	/* Single Post Share */
+	.commentlist .children {
+		margin: 0 25px 0 0;
+	}
+}
+
+
+/* ---------------------------------------------------------------------------------------
+	04. WOOCOMMERCE
+--------------------------------------------------------------------------------------- */
+
+
+/* ---------------------------------------------------------------------------------------
+	05. WOOCOMMERCE-THEME
+--------------------------------------------------------------------------------------- */
+

@@ -1,0 +1,74 @@
+<?php 
+$link             = NULL;
+$width            = NULL;
+$size             = NULL;
+$icon             = NULL;
+$color            = NULL;
+$color_custom     = NULL;
+$color_text       = NULL;
+$color_text_hover = NULL;
+$color_bg         = NULL;
+$color_bg_hover   = NULL;
+
+$link             = $atts['link'];
+$width            = $atts['width'];
+$size             = $atts['size'];
+$icon             = $atts['icon'];
+$color            = $atts['color'];
+$color_custom     = $atts['color_custom'];
+$color_text       = $atts['color_text'];
+$color_text_hover = $atts['color_text_hover'];
+$color_bg         = $atts['color_bg'];
+$color_bg_hover   = $atts['color_bg_hover'];
+	
+if ( empty( $link ) ) { 
+	$link = '#';
+}
+if ( empty( $color ) or $color == 'default' ) { 
+	$color = 'themebutton';
+}
+if ( empty( $size ) ) { 
+	$size = 'medium';
+}
+if ( !empty( $icon )  ) {
+	$icon = '<i class="fa fa-' . $icon . '"></i>';
+}
+
+echo '<a href="' . $link . '" id="' . $instanceID . '" class="button style2 ' . $color . ' ' . $size . ' ' . $width . '">' . $content . $icon . '</a>';
+
+//====================================================================
+// Output custom styling if set
+//====================================================================
+
+if ( $color_custom == 'on' and ( ! empty( $color_text ) or ! empty( $color_text_hover ) or ! empty( $color_bg ) or ! empty( $color_bg_hover ) ) ) {
+	echo '<style>';
+
+	// Output text color
+	if ( ! empty( $color_text )  ) {
+		echo '#' . $instanceID . ' { color: ' . $color_text . '; }';
+	}
+
+	// Output text color - Hover
+	if ( ! empty( $color_text_hover ) ) {
+		echo '#' . $instanceID . ':hover { color: ' . $color_text_hover . '; }';
+	}
+
+	// Output background color
+	if ( ! empty( $color_bg ) ) {
+		echo '#' . $instanceID . ' { ';
+		echo 'background: ' . $color_bg . ';';
+		echo '-webkit-box-shadow: 0 0 0 4px ' . $color_bg . ';';
+		echo '-moz-box-shadow: 0 0 0 4px ' . $color_bg . ';';
+		echo '-ms-box-shadow: 0 0 0 4px ' . $color_bg . ';';
+		echo '-o-box-shadow: 0 0 0 4px ' . $color_bg . ';';
+		echo 'box-shadow: 0 0 0 4px ' . $color_bg . ';';
+		echo '}';
+	}
+
+	// Output background color - Hover
+	if ( ! empty( $color_bg_hover ) ) {
+		echo '#' . $instanceID . ':hover { background: ' . $color_bg_hover . '; }';
+	}
+
+	echo '</style>';
+}

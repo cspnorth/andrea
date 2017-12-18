@@ -1,0 +1,13 @@
+			@font-face {
+				font-family: 'satisfy';
+				font-style: normal;
+				src: url('/andrea/wp-content/uploads/useanyfont/171217094157Satisfy.eot');
+				src: local('satisfy'), url('/andrea/wp-content/uploads/useanyfont/171217094157Satisfy.eot') format('embedded-opentype'), url('/andrea/wp-content/uploads/useanyfont/171217094157Satisfy.woff') format('woff');
+			}
+            
+            .satisfy{font-family: 'satisfy' !important;}
+            
+						#slider .featured-title{
+					font-family: 'satisfy' !important;
+				}
+		

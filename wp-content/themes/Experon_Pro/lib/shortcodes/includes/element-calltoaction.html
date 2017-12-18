@@ -1,0 +1,55 @@
+<?php
+$style  = NULL;
+$title  = NULL;
+$teaser = NULL;
+$button = NULL;
+$link   = NULL;
+$target = NULL;
+
+$style  = $atts['style'];
+$title  = $atts['title'];
+$teaser = $atts['teaser'];
+$button = $atts['button'];
+$link   = $atts['link'];
+$target = $atts['target'];
+
+if ( $style !== 'style2' ) {
+	$style      = ' style1';
+	$class      = NULL;
+	$wrap_start = NULL;
+	$wrap_end   = NULL;
+} else if ( $style == 'style2' ) {
+	$style      = ' style2';
+	$class      = ' one_third last';
+	$wrap_start = '<div class="action-message two_third">';
+	$wrap_end   = '</div>';
+}
+if ( ! empty( $title ) ) {
+	$title = '<h3>' . $title . '</h3>';
+}
+if ( ! empty( $teaser ) ) {
+	$teaser = wpautop( $teaser );
+}
+if ( empty( $button ) ) {
+	$button = 'Read More';
+}
+if ( $target == 'new' ) {
+	$target = ' target="_blank"';
+}
+
+echo '<div id="sc-action-' . $instanceID . '" class="sc-action' . $style . '">';
+	echo '<div class="sc-action-core">';
+	echo $wrap_start;
+		echo '<div class="action-text">';
+		echo $title;
+		echo '</div>';
+		echo '<div class="action-teaser">';
+		echo $teaser;
+		echo '</div>';
+	echo $wrap_end;
+	echo '<div class="action-link' . $class . '">';
+		echo '<a class="themebutton" href="' . $link . '"' . $target . '>' . $button . '</a>';
+	echo '</div>';
+	echo '<div class="clearboth"></div>';
+	echo '</div>';
+echo '</div>';
